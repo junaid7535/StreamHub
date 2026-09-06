@@ -1,6 +1,3 @@
-import Foundation
-import Testing
-
 struct AppDependencies {
     let videoRepository: any VideoRepository
     let playerClient: any PlayerClient
@@ -22,7 +19,10 @@ struct AppDependencies {
     }
 
     func makePlayerViewModel(for video: Video) -> PlayerViewModel {
-        PlayerViewModel(video: video, playerClient: playerClient)
+        PlayerViewModel(
+            video: video,
+            playerClient: playerClient
+        )
     }
 
     func makeBookmarksViewModel() -> BookmarksViewModel {
@@ -32,6 +32,9 @@ struct AppDependencies {
     func makePlaybackHistoryViewModel() -> PlaybackHistoryViewModel {
         let catalogProvider = videoRepository as? any VideoCatalogProviding
         let videoCatalog = catalogProvider?.videoCatalog ?? [:]
-        return PlaybackHistoryViewModel(videoCatalog: videoCatalog)
+
+        return PlaybackHistoryViewModel(
+            videoCatalog: videoCatalog
+        )
     }
 }
