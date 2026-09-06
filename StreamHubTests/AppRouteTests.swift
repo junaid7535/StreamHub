@@ -4,6 +4,7 @@ import Foundation
 
 @MainActor
 struct AppRouteTests {
+
     @Test
     func detailRoute_withSameVideo_isEqual() {
         let video = Video(
