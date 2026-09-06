@@ -120,7 +120,5 @@ Run from Xcode Test Navigator, or with `Product > Test`.
 - iOS Simulator 26.x
 - Swift 6 (as configured by project settings)
 
-## License
 
-MIT. See [LICENSE](LICENSE).
 # StreamHub
